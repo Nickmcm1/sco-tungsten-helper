@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    body { font-family: Roboto, Arial, sans-serif; width: 260px; margin: 0; padding: 12px; font-size: 13px; color: #222; }
+    h1 { font-size: 14px; margin: 0 0 10px; }
+    label { display: flex; align-items: center; gap: 8px; margin: 8px 0; cursor: pointer; }
+    .row { margin: 10px 0; }
+    button { width: 100%; padding: 7px 10px; border: 0; border-radius: 4px; background: #005a9c; color: #fff; cursor: pointer; font-size: 13px; }
+    button.secondary { background: #6b7785; }
+    button:hover { filter: brightness(0.95); }
+    .hint { color: #666; font-size: 11px; margin-top: 4px; }
+    .count { color: #14532d; font-weight: 700; }
+    .donate { margin-top: 12px; padding-top: 12px; border-top: 1px solid #e5e7eb; }
+    button.bmc { background: #FFDD00; color: #000; font-weight: 600;
+      font-family: Inter, Roboto, Arial, sans-serif; border: 1px solid #000;
+      display: flex; align-items: center; justify-content: center; gap: 6px; }
+    .donate .hint { text-align: center; }
+    .disclaimer { margin-top: 12px; padding-top: 10px; border-top: 1px solid #e5e7eb;
+      color: #777; font-size: 10px; line-height: 1.4; }
+    .disclaimer a { color: #005a9c; }
+  </style>
+</head>
+<body>
+  <h1>SCO Tungsten Helper</h1>
+
+  <label><input type="checkbox" id="autoRun" /> Load names automatically</label>
+  <label><input type="checkbox" id="showProgram" /> Show program under name</label>
+  <label><input type="checkbox" id="showBuyerContact" /> Show VA buyer contact (email)</label>
+
+  <div class="row">
+    <button id="rescan">Re-scan current page</button>
+    <div class="hint">Re-reads every PO on the open list, ignoring the cache.</div>
+  </div>
+
+  <div class="row">
+    <button id="clear" class="secondary">Clear cached names (<span class="count" id="count">0</span>)</button>
+  </div>
+
+  <div class="donate">
+    <button id="donate" class="bmc"><span>💻</span> Buy me a coffee</button>
+    <div class="hint">No pressure &mdash; only if you find this useful.</div>
+  </div>
+
+  <div class="disclaimer">
+    Unofficial tool. Not affiliated with, endorsed by, or connected to
+    Tungsten Network / Kofax or the U.S. Department of Veterans Affairs.
+    Reads PO data only from your own logged-in session; nothing is sent
+    anywhere &mdash; names are cached locally on your device.
+    <a href="#" id="privacy">Privacy</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

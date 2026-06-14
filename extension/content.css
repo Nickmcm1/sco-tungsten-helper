@@ -1,0 +1,56 @@
+/* Tungsten PO Student Names — injected styles */
+
+.tpn-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0 8px;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 13px;
+}
+
+/* color/background forced with !important so the host portal's button styles
+   (which otherwise render the text grey) can't override them. */
+.tpn-btn {
+  background: #005a9c !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  text-shadow: none;
+}
+.tpn-btn:hover { background: #00467a !important; color: #fff !important; }
+.tpn-btn:disabled { background: #9bb6cc !important; color: #fff !important; cursor: default; }
+.tpn-btn-secondary { background: #6b7785 !important; color: #fff !important; }
+.tpn-btn-secondary:hover { background: #555f6b !important; color: #fff !important; }
+
+.tpn-status { color: #444; }
+
+.tpn-name {
+  display: block;
+  margin-top: 3px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25;
+  color: #14532d;
+}
+.tpn-name.tpn-pending { color: #92704a; font-weight: 400; font-style: italic; }
+.tpn-name.tpn-error { color: #b00020; }
+.tpn-name.tpn-idle { display: none; }
+
+.tpn-program {
+  display: block;
+  font-weight: 400;
+  font-size: 11px;
+  color: #555;
+}
+
+.tpn-contact {
+  display: block;
+  font-weight: 400;
+  font-size: 11px;
+  color: #005a9c;
+}

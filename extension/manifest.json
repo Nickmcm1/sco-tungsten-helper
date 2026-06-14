@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "SCO Tungsten Helper",
+  "version": "1.0.0",
+  "description": "Unofficial helper for VA School Certifying Officials: shows the student name on each Tungsten PO without opening it.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://portal-legacy.tungsten-network.com/*"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "SCO Tungsten Helper",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://portal-legacy.tungsten-network.com/*"
+      ],
+      "all_frames": true,
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
