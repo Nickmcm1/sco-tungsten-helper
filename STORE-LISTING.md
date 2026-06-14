@@ -53,15 +53,14 @@ Declare:
 
 ## Privacy policy URL (required because PII is handled)
 
-Host `PRIVACY.md` (or the bundled `extension/privacy.html`) at a public URL and
-paste it here, e.g. a GitHub Pages link:
+Paste this published URL into the dashboard's Privacy policy field:
 
 ```
-https://<your-username>.github.io/<repo>/PRIVACY.html
+https://nickmcm1.github.io/sco-tungsten-helper/
 ```
 
 (The extension also bundles `privacy.html`, linked from the popup, but the Web
-Store requires a publicly reachable URL.)
+Store requires this publicly reachable URL.)
 
 ## Pre-submission checklist
 
